@@ -1,0 +1,9 @@
+project: savantenvs/gifsicle
+target: fuzz-gifsicle-main
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-gifsicle-main/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-gifsicle-main
+    libfuzzer: true
+    timeout: 30
